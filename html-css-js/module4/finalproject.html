@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Porfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            function formSubmit(e) {
+                e.preventDefault(); 
+                var popup = document.createElement("div");
+                popup.id = "popup";
+                popup.classList.add(
+                    "gap-2",
+                    "fixed",
+                    "top-1/2",
+                    "left-1/2",
+                    "-translate-x-1/2",
+                    "-translate-y-1/2",
+                    "flex",
+                    "flex-col",
+                    "items-center",
+                    "justify-center",
+                    "p-4",
+                    "bg-orange-200",
+                    "rounded"
+                );
+                var img = document.createElement("img");
+                img.setAttribute("src", "https://cdn-icons-png.freepik.com/256/1721/1721539.png?semt=ais_hybrid");
+                img.classList.add("w-6", "h-6");
+                popup.appendChild(img);
+                var title = document.createElement("h1")
+                title.textContent = "Thanks for leaving a recommendation"
+                title.classList.add("text-black","font-medium")
+                popup.appendChild(title)
+                var button = document.createElement("button")
+                button.textContent = "Ok"
+                button.classList.add("bg-white","text-orange-400","border-2","border-orange-400","rounded-md","px-5")
+                button.addEventListener("click",(e)=>{
+                    e.preventDefault()
+                    popup.remove()
+                })
+                popup.appendChild(button)
+                document.body.appendChild(popup);
+                function handleClickOutsidePopup(event)
+                {
+                    if(!popup.contains(event.target))
+                    {
+                        document.body.removeChild(popup)
+                        document.body.removeEventListener("click",handleClickOutsidePopup)
+                    }
+                }
+                document.body.addEventListener("click",handleClickOutsidePopup)
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <div id="header" class="flex py-2 items-center  justify-between bg-orange-400 ">
+                <div id ="about" class="px-12 text-white">
+                    <p><b>Cong Tien</b></p>
+                    <div class="flex gap-2 ">
+                        <img 
+                        class="w-6 h-6"
+                        src="https://www.cdnlogo.com/logos/g/24/gmail-icon.svg" alt="">
+                        <p>pctien@gmail.com</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <img 
+                        class="w-6 h-6"
+                        src="https://svgsilh.com/png-512/304080.png" alt="">
+                        <p>+84123456789</p>
+                    </div>
+                </div>
+                <div id = "nav" class="px-12 ">
+                    <nav class="nav-bar flex gap-4 text-white">
+                        <a href="#aboutme">About me</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#recommendations">Recommendations</a>
+                    </nav>
+                </div>
+                <script>
+                    var navBar = document.querySelector(".nav-bar");
+                    var items = Array.from(navBar.children);
+
+                    function handleNavItemClick(e)
+                    {
+                        items.forEach(item=>item.classList.remove("underline","font-medium"))
+                        e.currentTarget.classList.add("underline","font-medium")
+                    }
+                    items.forEach(item=>item.addEventListener("click",handleNavItemClick))
+
+                </script>
+            </div>
+        </header>
+        <main>
+            <section id ="aboutme">
+                <div class="flex p-12 items-center ">   
+                    <figure src>
+                        <img
+                        class="w-1/2 h-1/2"
+                        src="https://img.freepik.com/premium-vector/boy-coding-with-laptop-illustration_418302-2379.jpg" alt="">
+                    </figure>
+                    <div class="text-orange-400">
+                        <h1 class=" text-5xl"><b>I'm Tien</b></h1>
+                        <p class="text-gray-600">I'm a fullstack developer, actively learning </p>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+            </section>
+            <section id="skills">
+                <h1 class="text-5xl m-5 px-5 text-orange-400"><b>Skills</b></h1>
+                <div class="px-5 flex justify-items-center  flex-wrap">
+                    <div class="w-1/4 h-40 text-center my-3 ">
+                        <div class="h-40 mx-3  flex flex-col items-center justify-center rounded-md shadow-lg shadow-orange-200 border-orange-200 border-2 bg-white">
+                            <figure class=" justify-center items-center">
+                                <img class="w-10 h-10" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" alt="">
+                            </figure>
+                            <figcaption class="mb-1">HTML</figcaption>
+                            <p>1 year experience</p> 
+                        </div>
+                    </div>
+                    <div class="w-1/4 h-40 text-center my-3 ">
+                        <div class="h-40 mx-3 flex flex-col items-center justify-center rounded-md shadow-lg shadow-orange-200 border-orange-200 border-2 bg-white">
+                            <figure class=" justify-center items-center">
+                                <img class="w-10 h-10" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="">
+                            </figure>
+                            <figcaption class="mb-1">CSS</figcaption>
+                            <p>1 year experience</p> 
+                        </div>
+                    </div>
+                    <div class="w-1/4 h-40 text-center my-3 ">
+                        <div class="h-40 mx-3 flex flex-col items-center justify-center rounded-md shadow-lg shadow-orange-200 border-orange-200 border-2 bg-white">
+                            <figure class=" justify-center items-center">
+                                <img class="w-10 h-10" src="https://thienanblog.com/wp-content/uploads/2015/04/javascript_logo.png" alt="">
+                            </figure>
+                            <figcaption class="mb-1">JavaScript</figcaption>
+                            <p>1 year experience</p> 
+                        </div>
+                    </div>
+                    <div class="w-1/4 h-40 text-center my-3 ">
+                        <div class="h-40 mx-3 flex flex-col items-center justify-center rounded-md shadow-lg shadow-orange-200 border-orange-200 border-2 bg-white">
+                            <figure class=" justify-center items-center">
+                                <img class="w-10 h-10" src="https://banner2.cleanpng.com/20180805/iot/8db265e00790702392f413b6d2f71637.webp" alt="">
+                            </figure>
+                            <figcaption class="mb-1">Java</figcaption>
+                            <p>1 year experience</p> 
+                        </div>
+                    </div>
+                    <div class="w-1/4 h-40 text-center my-3 ">
+                        <div class="h-40 mx-3 flex flex-col items-center justify-center rounded-md shadow-lg shadow-orange-200 border-orange-200 border-2 bg-white">
+                            <figure class=" justify-center items-center">
+                                <img class="w-10 h-10" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjxk4D03AZyAqb6wAUX-8DdB64pru3WxBZaw&s" alt="">
+                            </figure>
+                            <figcaption class="mb-1">Github</figcaption>
+                            <p>1 year experience</p> 
+                        </div>
+                    </div>
+                    <div class="w-1/4 h-40 text-center my-3 ">
+                        <div class="h-40 mx-3 flex flex-col items-center justify-center rounded-md shadow-lg shadow-orange-200 border-orange-200 border-2 bg-white">
+                            <figure class=" justify-center items-center">
+                                <img class="w-10 h-10" src="https://banner2.cleanpng.com/20190418/qty/kisspng-amazon-web-services-logo-cloud-computing-amazon-co-logoaws-1-itnext-summit-1713897691932.webp" alt="">
+                            </figure>
+                            <figcaption class="mb-1">AWS</figcaption>
+                            <p>1 year experience</p> 
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="projects" class=" px-5 m-3">
+                <h1 class="text-5xl text-orange-400 mb-10"><b>Projects</b></h1>
+                <div class="mx-10">
+                    <h1 class="text-lg"><b>Sentiment Analyzer</b></h1>
+                    <li>Developed and deployed a sentiment analyzer for the box reviews sections of an eCommerce platform using IBM NLU</li>
+                    <hr class="text-center m-auto my-4 border-t-2 border-gray-300 w-3/4 ">
+                </div>
+                <div class="mx-10">
+                    <h1 class="text-lg"><b>Sentiment Analyzer</b></h1>
+                    <li>Developed and deployed a sentiment analyzer for the box reviews sections of an eCommerce platform using IBM NLU</li>
+                    <hr class="text-center m-auto my-4 border-t-2 border-gray-300 w-3/4 ">
+                </div>
+                <div class="mx-10">
+                    <h1 class="text-lg"><b>Sentiment Analyzer</b></h1>
+                    <li>Developed and deployed a sentiment analyzer for the box reviews sections of an eCommerce platform using IBM NLU</li>
+                    <hr class="text-center m-auto my-4 border-t-2 border-gray-300 w-3/4 ">
+                </div>
+            </section>
+            <section id="recommendations" class=" px-5 m-3">
+                <h1 class="text-5xl text-orange-400 mb-10"><b>Recommendations</b></h1>
+                <div class="flex flex-wrap">
+                    <div class="w-1/3 italic flex items-center text-center ">
+                        <div class="m-2 p-2 border-2 border-orange-200 rounded-lg ">
+                            <p class="">"Jane is a very kind person and quick learner and quickly grasp key concepts of Web development. She got a great attitute Jane is a very kind person and quick learner and quickly grasp key concepts of Web development. She got a great attitute Jane is a very kind person and quick learner and quickly grasp key concepts of Web development. She got a great attitute"</p>
+                        </div>
+                    </div>
+                    <div class="w-1/3 italic flex items-center text-center ">
+                        <div class="m-2 p-2 border-2 border-orange-200 rounded-lg ">
+                            <p class="">"Jane is a very kind person and quick learner and quickly grasp key concepts of Web development. She got a great attitute Jane is a very kind person and quick learner and quickly grasp key concepts of Web development. She got a great attitute Jane is a very kind person and quick learner and quickly grasp key concepts of Web development. She got a great attitute"</p>
+                        </div>
+                    </div>
+                    <div class="w-1/3 italic flex items-center text-center ">
+                        <div class="m-2 p-2 border-2 border-orange-200 rounded-lg ">
+                            <p class="">"Jane is a very kind person and quick learner and quickly grasp key concepts of Web development. She got a great attitute Jane is a very kind person and quick learner and quickly grasp key concepts of Web development. She got a great attitute Jane is a very kind person and quick learner and quickly grasp key concepts of Web development. She got a great attitute"</p>
+                        </div>
+                    </div>
+                    <div class="w-1/3 italic flex items-center text-center ">
+                        <div class="m-2 p-2 border-2 border-orange-200 rounded-lg ">
+                            <p class="">"Jane is a very kind person and quick learner and quickly grasp key concepts of Web development. She got a great attitute Jane is a very kind person and quick learner and quickly grasp key concepts of Web development. She got a great attitute Jane is a very kind person and quick learner and quickly grasp key concepts of Web development. She got a great attitute"</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="flex text-start flex-col items-center mt-20 ">
+                    <div class="w-1/2 ">
+                        <h1 class="text-2xl w-full" ><b>Leave a Recommendation</b></h1>
+                        <form onsubmit="formSubmit(event)" action="" class="w-full mt-10">
+                            <div class="flex-col flex items-center justify-center gap-5">
+                                <input class="w-full border-2 p-2 rounded-md" placeholder="Name (Optional)" type="text" name="name" id="name">
+                                <input class="w-full h-40 border-2 p-2 rounded-md" placeholder="Message" type="text" name="message">
+                                <button class="h-10 text-orange-400 border-orange-400 border-2 rounded-lg px-10" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+    </body>
+    <footer class="mt-24">
+        <div class="w-full relative">
+            <a class="absolute p-5 right-0" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="orange" width="63px">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+            </a>
+        </div>
+    </footer>
+</html>
