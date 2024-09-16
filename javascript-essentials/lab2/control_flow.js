@@ -1,4 +1,4 @@
-{
+
     let userRole = "admin";
     let accessLevel;
     if (userRole === "admin") {
@@ -9,8 +9,8 @@
         accessLevel = "No access granted";
     }
     console.log("Access Level:", accessLevel);
-}
-{
+
+
     let isLoggedIn = true;
 let userMessage;
 if (isLoggedIn) {
@@ -24,8 +24,8 @@ if (isLoggedIn) {
 }
 console.log("User Message:", userMessage);
 
-}
-{
+
+
     let userType = "subscriber";
 let userCategory;
 switch (userType) {
@@ -43,4 +43,3 @@ switch (userType) {
 }
 console.log("User Category:", userCategory);
 
-}
