@@ -1,1 +1,1 @@
-print("firstkaka")
+print("first")
