@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TravelBloom</title>
+        <link href="./output.css" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+
+
+    </head>
+    <body 
+    style="background-repeat: no-repeat; background-size:cover; background-image: url(https://ktla.com/wp-content/uploads/sites/4/2023/03/GettyImages-1204725273.jpg?w=2560&h=1440&crop=1);" >
+
+        <header >
+            
+            <div class="flex justify-between  bg-slate-700 bg-opacity-75 p-2 items-center" >
+
+                <div class="flex gap-2 items-center">
+                    <img
+                    class="w-12 h-12"
+                    src="https://cdn-icons-png.flaticon.com/512/0/614.png" alt="">
+                    <h1 class = "italic font-bold text-white">TravelBloom</h1>
+                </div>
+
+                <div class="flex gap-5 font-semibold text-md nav text-white ">
+                    <a href="./travel_recommendation.html">Home</a>
+                    <a href="./aboutus.html">About Us</a>
+                    <a href="./contactus.html">Contact Us</a>
+                </div>
+
+                <div>
+                    <div class="flex gap-2 bg-white rounded-full p-2 justify-center items-center px-5">
+                        <input id="inputSearch" class="" placeholder="Enter a destination or a keyword">
+                        <img 
+                        class="w-6 h-6"
+                        src="https://static.vecteezy.com/system/resources/previews/009/341/164/original/search-icon-sign-symbol-design-free-png.png" alt="">
+                        <button id="searchBtn" class="text-white bg-emerald-600  rounded-lg px-3 py-1">Search</button>
+                        <button id="clearBtn" class="text-white bg-emerald-600  rounded-lg px-3 py-1">Clear</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            
+        </header>
+
+
+        <main>
+            <div class="h-screen flex justify-start items-center gap-36 ">
+                <div class="social flex flex-col gap-5 w-1/12  h-full justify-center items-center ">
+                    <a href="">
+                        <img 
+                        class="w-8 h-8 object-cover"
+                        src="https://www.iconpacks.net/icons/2/free-twitter-logo-icon-2429-thumb.png" alt="">
+                    </a>
+                    <a href="">
+                        <img 
+                        class="w-8 h-8 object-cover"
+                        src="https://static.vecteezy.com/system/resources/previews/016/716/481/original/facebook-icon-free-png.png" alt="">
+                    </a>
+                    <a href="">
+                        <img 
+                        class="w-8 h-8 object-cover"
+                        src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" alt="">
+                    </a>
+                    <a href="">
+                        <img 
+                        class="w-8 h-8 object-cover"
+                        src="https://images.vexels.com/content/137425/preview/youtube-icon-logo-719479.png" alt="">
+                    </a>
+                </div>
+
+
+                <div class="main-screen flex text-white items-center h-full gap-20  w-11/12 mr-20">
+                    <div class="flex flex-col gap-12">
+                        <h1 class="mt-10 text-6xl font-extrabold ">CONTACT US</h1>
+                        <p>Get in touch</p>
+                    </div>
+                    <div class="flex-1">
+                        <form action="">
+                            <div class="flex flex-col gap-4">
+                                <label for="">Name</label>
+                                <input class="p-2 bg-transparent border border-gray-400 rounded-lg  " placeholder="Enter your name" type="text" name="" id="">
+                                <label for="">Email</label>
+                                <input class="p-2 bg-transparent border border-gray-400 rounded-lg  " placeholder="Enter your name" type="text" name="" id="">
+                                <label for="">Message</label>
+                                <textarea class="p-2 pb-10 bg-transparent border border-gray-400 rounded-lg" placeholder="Enter message" name="" id=""></textarea>                                
+                                <button class="bg-green-800 rounded-lg p-1">Submit</button>
+                            </div>
+
+
+                        </form>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+
+        </main>
+        <script src="./travel_recommendation.js" ></script>
+    </body>
+</html>
