@@ -1,0 +1,16 @@
+{"level":"info","message":"John Doe, Miami"}
+{"level":"info","message":"Kate Smith, Houston"}
+{"level":"info","message":"Ross Taylor, Los Angeles"}
+{"level":"info","message":"Joseph Anderson, North Dakota"}
+{"level":"info","message":"Maria Martinex, Chicago"}
+{"level":"info","message":"Christina Johnson, Dallas"}
+{"level":"info","message":"Jim Walker, Denver"}
+{"level":"info","message":"Dan Williams, Atlanta"}
+{"level":"info","message":"Emma Turner, San Francisco"}
+{"level":"info","message":"Elijah Foster, New York"}
+{"level":"info","message":"Ross Taylor ,Los Angeles"}
+{"level":"info","message":"Ross Taylor ,Los Angeles"}
+{"level":"error","message":"Record not found"}
+{"level":"warn","message":"Record number has to be within 1 to 10"}
+{"level":"error","message":"Input not a number"}
+{"level":"warn","message":"Only numbers can be entered."}
